@@ -1,4 +1,12 @@
 //Main JSON file creator
+
+// if(!newFile) {
+//     let file = {}
+//     } else {
+//         let file = newFile;
+//     }
+
+
 let file = {}
 var add_to_compiler = function(main, sub1, sub2) {
     if (!(main in file)) {
@@ -12,6 +20,7 @@ var add_to_compiler = function(main, sub1, sub2) {
     }
     document.querySelector("#draw-our-file-here").innerHTML = JSON.stringify(file);
     console.log(file)
+    // window.sessionStorage.newFile = file;
 }
 //Adding submit button listener
 document.querySelector("#submit").addEventListener("click", () => {add_to_compiler(
