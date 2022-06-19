@@ -10,14 +10,20 @@
 let file = {}
 var add_to_compiler = function(main, sub1, sub2) {
     if (!(main in file)) {
-        file[main] = {};
-    } 
+        if (!(main == "")){
+            file[main] = {};
+        };
+    };
     if (!(sub1 in file[main])) {
-        file[main][sub1] = {};
-    }
+        if (!(sub1 == "")){
+            file[main][sub1] = {};
+        };
+    };
     if (!(sub2 in file[main][sub1])) {
-        file[main][sub1][sub2] = {};
-    }
+        if (!(sub2 == "")){
+            file[main][sub1][sub2] = {};
+        };
+    };
     document.querySelector("#draw-our-file-here").innerHTML = JSON.stringify(file);
     console.log(file)
     // window.sessionStorage.newFile = file;
@@ -38,3 +44,4 @@ document.querySelector("#nt3").addEventListener("click", () => {newTitle("#sub2-
 
 
 var new_obj = {"Mars":{"The Large Hurricane":{"Nothing (that we know of)":{}}},"Earth":{"Ogden, UT":{"Magpies":{}},"Africa":{"Giraffe":{},"Lion":{}}}};
+
